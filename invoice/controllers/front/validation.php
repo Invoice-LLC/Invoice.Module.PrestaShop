@@ -85,7 +85,7 @@ class InvoiceValidationModuleFrontController extends ModuleFrontController
 
         if($createNew or $terminalInfo == null or (isset($terminalInfo->error) and $terminalInfo->error != null)) {
             $this->log("Создание нового терминала");
-            $terminal_name = Configuration::get('INVOICE_TERMINAL_NAME');
+            $terminal_name = Configuration::get('PS_SHOP_NAME');
 
             if($terminal_name == null) {
                 $terminal_name = "Магазин";
@@ -93,7 +93,6 @@ class InvoiceValidationModuleFrontController extends ModuleFrontController
 
             $create_terminal = new CREATE_TERMINAL($terminal_name);
             $create_terminal->type = "dynamical";
-            $create_terminal->description = Configuration::get('INVOICE_TERMINAL_DESC');
 
             $terminalInfo = $this->restClient->CreateTerminal($create_terminal);
 

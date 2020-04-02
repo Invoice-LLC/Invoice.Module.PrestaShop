@@ -199,8 +199,6 @@ class Invoice extends PaymentModule
             'INVOICE_TERMINAL' => Configuration::get('INVOICE_TERMINAL', ""),
             'INVOICE_LOGIN' => Configuration::get('INVOICE_LOGIN', 'demo'),
             'INVOICE_API_KEY' => Configuration::get('INVOICE_API_KEY', ""),
-            'INVOICE_TERMINAL_NAME' => Configuration::get('INVOICE_TERMINAL_NAME', "Магазин PrestaShop"),
-            'INVOICE_TERMINAL_DESC' => Configuration::get('INVOICE_TERMINAL_DESC', "Какой-то магазин"),
         );
     }
 
