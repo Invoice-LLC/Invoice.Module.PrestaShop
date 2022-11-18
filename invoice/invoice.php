@@ -162,9 +162,9 @@ class Invoice extends PaymentModule
                 'input' => array(
                     array(
                         'type' => 'text',
-                        'desc' => $this->l('Введите логин от личного кабинета Invoice'),
+                        'desc' => $this->l('Id компании'),
                         'name' => 'INVOICE_LOGIN',
-                        'label' => $this->l('Login'),
+                        'label' => $this->l('Merchant Id'),
                         'value' => Configuration::get('INVOICE_LOGIN')
                     ),
                     array(
@@ -197,8 +197,10 @@ class Invoice extends PaymentModule
     {
         return array(
             'INVOICE_TERMINAL' => Configuration::get('INVOICE_TERMINAL', ""),
-            'INVOICE_LOGIN' => Configuration::get('INVOICE_LOGIN', 'demo'),
+            'INVOICE_LOGIN' => Configuration::get('INVOICE_LOGIN', ""),
             'INVOICE_API_KEY' => Configuration::get('INVOICE_API_KEY', ""),
+            'INVOICE_TERMINAL_NAME' => Configuration::get('INVOICE_TERMINAL_NAME', ""),
+            'INVOICE_TERMINAL_DESC' => Configuration::get('INVOICE_TERMINAL_DESC', ""),
         );
     }
 
