@@ -19,13 +19,4 @@ class INVOICE_ORDER
      * @var string
      */
     public $id;
-
-    /**
-     * INVOICE_ORDER constructor
-     * @param $amount
-     */
-    public function __construct($amount)
-    {
-        $this->amount = $amount;
-    }
 }
